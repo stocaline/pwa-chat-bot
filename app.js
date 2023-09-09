@@ -18,8 +18,9 @@ function sendMessage() {
   fetch('https://chatbotfastapi.squareweb.app/processaPedido/', {
     method: 'POST',
     headers: {
-      //Accept: 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
+      Authorization: ''
     },
     body: JSON.stringify({
       "prefixo": "8496",
@@ -29,8 +30,9 @@ function sendMessage() {
   })
   .then((response) => response.json())
   .then((response) => {
-    var res = console.log(response)
-    showHistoric(message.value, rec)
+    console.log(response)
+    var res = JSON.parse(response.data).respostaBOT
+    showHistoric(message.value, res)
   })
   .catch((e) => {
     console.log('Error:', e)
