@@ -1,15 +1,14 @@
-//const room = window.location.pathname.replace(/\//g, '');
-//${room}
-
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open('my-cache').then((cache) => {
             return cache.addAll([
                 '/',
-                '/index.html',
-                '/manifest.json',
-                '/icon.png',
-                // Adicione aqui outros recursos que deseja em cache
+                './index.html',
+                './manifest.json',
+                './images/icons/icon-72x72.png',
+                './images/icons/icon-96x96.png',
+                './images/icons/icon-152x152.png',
+                './images/icons/icon-192x192.png',
             ]);
         })
     );
