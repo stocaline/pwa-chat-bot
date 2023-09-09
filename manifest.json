@@ -1,6 +1,6 @@
 {
-  "name": "Meu PWA",
-  "short_name": "PWA",
+  "name": "Chat Bot",
+  "short_name": "Chatbot",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#303030",
