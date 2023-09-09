@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#303030">
-    <link rel="manifest" href="./manifest.json"> <!-- Arquivo de manifesto do PWA -->
-    <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png"> <!-- Ícone para dispositivos Apple -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="theme-color" content="#1D1D2E">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icons/logo.png">
     <link rel="canonical" href="https://pwa-chat-bot.vercel.app/">
+    <link rel="stylesheet" href="./styles/global.css">
     <title>Chat Bot</title>
 </head>
 <body>
-    <div id="messages">
-
-    </div>
-
-    <form name="message_form_name" id="message_form">
-        <input name="msg" id="message" type="text" />
-        <button type="submit">Enviar</button> 
-    </form>
-
+    <section id="chat">
+        <div class="header">
+            <h1>Chat Bot Cesusc</h1>    
+        </div>
+        <p id="status"></p>
+        <div class="historic">
+        
+        </div>
+        <div class="footer">
+            <input name="msg" id="message" type="text" placeholder="Digite aqui..."/>
+            <button id="btn-submit" onclick="sendMessage()">Enviar</button> 
+        </div>
+    </section>
     
     <script src="./app.js"></script>
     <script src="./serviceWorker.js"></script>
-
 </body>
 </html>
