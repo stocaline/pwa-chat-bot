@@ -1,10 +1,11 @@
 {
   "name": "Meu PWA",
   "short_name": "PWA",
-  "start_url": "/",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#303030",
   "theme_color": "#303030",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
