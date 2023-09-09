@@ -19,12 +19,12 @@
 
 #historic .box-my-message .my-message {
     text-align: right;
-    background-color: #303030;
+    background-color: #508bbb;
 }
 
 #historic .box-response-message .chat-response {
     text-align: left;
-    background-color: blue;
+    background-color: #008cff;
 }
 
 #historic .box-my-message .my-message,
