@@ -15,12 +15,11 @@ function sendMessage() {
   btnSubmit.style.cursor = 'not-allowed'
   message.disabled = true
 
-  fetch('https://chatbotfastapi.squareweb.app/processaPedido/', {
-    method: 'POST',
+  fetch("https://chatbotfastapi.squareweb.app/processaPedido/", {
+    method: "POST",
+    mode: "no-cors",
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      Authorization: ''
+      "Content-Type": "application/json"
     },
     body: JSON.stringify({
       "prefixo": "8496",
@@ -28,7 +27,6 @@ function sendMessage() {
       "mensagem": `${message.value}`
     })
   })
-  .then((response) => response.json())
   .then((response) => {
     console.log(response)
     var res = JSON.parse(response.data).respostaBOT
@@ -55,7 +53,7 @@ function sendMessage() {
 
     var myMessage = document.createElement('p')
     myMessage.className = 'my-message'
-    myMessage.innerHTML = message
+    myMessage.textContent = message
 
     boxMyMessage.appendChild(myMessage)
     historic.appendChild(boxMyMessage)
