@@ -34,4 +34,6 @@
     padding: 1rem;
     color: #fff;
     margin: 0;
+    max-width: 350px;
+    font-size: .7rem;
 }

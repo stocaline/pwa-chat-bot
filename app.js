@@ -59,11 +59,10 @@ function showHistoric(message, response) {
 
   var myMessage = document.createElement('p')
   myMessage.className = 'my-message'
-  myMessage.innerHTML = message
+  myMessage.innerHTML = markdown(message)
 
   boxMyMessage.appendChild(myMessage)
   historic.appendChild(boxMyMessage)
-
 
   //Response
   var boxResponseMessage = document.createElement('div')
@@ -71,7 +70,8 @@ function showHistoric(message, response) {
 
   var chatResponse = document.createElement('p')
   chatResponse.className = 'chat-response'
-  chatResponse.innerHTML = response
+  chatResponse.innerHTML = markdown(response)
+
 
   boxResponseMessage.appendChild(chatResponse)
   historic.appendChild(boxResponseMessage)
@@ -80,6 +80,12 @@ function showHistoric(message, response) {
   historic.scrollTop = historic.scrollHeight
 }
 
+function markdown(text) {
+  var addMarkdownLink = text.replace(/\b(http\S+)\b/g, '<a href="$1" target="_blank">$1</a>')
+  var addMarkdownStrong = addMarkdownLink.replace(/\n/g, "<br>")
+  var addMarkdownSpace = addMarkdownStrong.replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
+  return addMarkdownSpace
+}
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
