@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap');
 @import url(./chat.css);
+@import url(./historic.css);
 
 * {
     padding: 0;
@@ -7,7 +8,7 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --gray: #1D1D2E;
 }
 
@@ -24,4 +25,13 @@ body {
 
 p {
     color: white;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
 }

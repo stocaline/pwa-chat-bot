@@ -20,16 +20,17 @@
 #historic .box-my-message .my-message {
     text-align: right;
     background-color: #508bbb;
+    border-radius: 10px 10px 0 10px;
 }
 
 #historic .box-response-message .chat-response {
     text-align: left;
     background-color: #008cff;
+    border-radius: 10px 10px 10px 0;
 }
 
 #historic .box-my-message .my-message,
 #historic .box-response-message .chat-response {
-    border-radius: 10px;
     padding: 1rem;
     color: #fff;
     margin: 0;
